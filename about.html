@@ -1,0 +1,120 @@
+<html>
+<head>
+    <title>About</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #0a192f;
+            color: #ffffff;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #0a192f;
+        }
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        .image-section {
+            position: relative;
+        }
+        .image-section img {
+            border-radius: 50%;
+            border: 10px solid #00ffff;
+            box-shadow: 0 0 20px #00ffff;
+        }
+        .scroll-buttons {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .about-section {
+            padding: 50px;
+            text-align: center;
+        }
+        .about-section h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .about-section p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .text-section, .image-section {
+                max-width: 100%;
+            }
+            .scroll-buttons {
+                display: none;
+            }
+        }
+        .image-section {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+        }
+        .about-text {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+            color: white;
+        }
+        .about-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #001a33; /* warna sesuai tema */
+            padding: 40px;
+        }
+        
+                
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">Portfolio</div>
+        <div class="nav-links">
+            <a href="home1.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="galery.html">Galery</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+        <div class="image-section">
+            <img src="saya.jpg"width="200" height="200"/>
+            <div class="scroll-buttons">
+                <a href="#"><i class="fas fa-chevron-up"></i></a>
+                <a href="#"><i class="fas fa-chevron-down"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="about-section">
+        <h1>About Me</h1>
+        <p>
+            Hallo! Nama saya Al Fath Maulana Kahfi. Saya seorang individu yang teliti, pekerja keras, dan optimis yang mampu menyesuaikan diri dengan lingkungan yang dinamis, dengan pemahaman dan pendekatan yang melihat gambaran besar dari suatu masalah. Memiliki pengetahuan luas dalam bekerja sama dengan orang banyak dan kolaborasi proyek dengan berbagai tim dari latar belakang berbeda.
+            Saya Mahasiswa di jurusan Teknik Informatika di Universitas PGRI Semarang. Sayamemiliki minat di bidang it dan busines, seperti coding dan Pemasaran Digital.Pernah berpengalaman di bidang it dan pernah bergabung proyek yang berhubungan dengan pemasaran digital. Mencari peluang kerja di bidang penjualan dan pemasaran.
+        </p>
+    </div>
+    <a href="#" class="scroll-top"><i class="fas fa-arrow-up"></i></a>
+</body>
+</html>

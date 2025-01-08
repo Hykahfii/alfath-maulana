@@ -1,0 +1,166 @@
+<html>
+ <head>
+  <title>
+   Portfolio
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+   body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #0a192f;
+            color: #ffffff;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #0a192f;
+        }
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+        }
+        .text-section {
+            max-width: 50%;
+        }
+        .text-section h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+        .text-section h2 {
+            font-size: 36px;
+            margin: 10px 0;
+        }
+        .text-section p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: #161b22;
+            color: #00f0ff;
+            text-decoration: none;
+            font-size: 20px;
+            box-shadow: 0 0 10px 2px #00f0ff;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+            box-shadow: 0 0 20px 5px #00f0ff;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+          }
+
+        .more-button {
+            background-color: #00ffff;
+            color: #0a192f;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .image-section {
+            position: relative;
+        }
+        .image-section img {
+            border-radius: 50%;
+            border: 10px solid #00ffff;
+            box-shadow: 0 0 20px #00ffff;
+        }
+        .scroll-buttons {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .scroll-buttons a {
+            color: #ffffff;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #00ffff;
+            color: #0a192f;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .text-section, .image-section {
+                max-width: 100%;
+            }
+            .scroll-buttons {
+                display: none;
+            }
+        }
+  </style>
+ </head>
+ <body>
+    <div class="navbar">
+        <div class="logo">Portfolio</div>
+        <div class="nav-links">
+            <a href="home1.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="galery.html">Galery</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="text-section">
+            <h1>Hallo, nama saya</h1>
+            <h2>Al Fath Maulana Kahfi</h2>
+            <p>Dan saya Mahasiswa Universitas PGRI Semarang</p>
+            <p>Saya jurusan Tekknik Informatika</p>
+            <div class="social-icons">
+                <a href="https://wa.me/081231971837" target="_blank" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+                <a href="https://instagram.com/hyvinss_" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://facebook.com/kepin" target="_blank" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+            <a href="about.html">
+                <button class="more-button">about</button>
+              </a>              
+        </div>
+        <div class="image-section">
+            <img src="saya.jpg" width="200" height="200"/>
+        </div>
+</body>
+</html>

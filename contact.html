@@ -1,0 +1,190 @@
+<html>
+<head>
+    <title>Contact</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #0a192f;
+            color: #ffffff;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #0a192f;
+        }
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        /* Styling for the contact section */
+.contact-section {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #f7f8fc, #dfe3ee);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.contact-section h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    color: #555;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Styling for the contact form */
+.contact-form {
+    display: table;
+    width: 200%;
+}
+
+.contact-form label {
+    display: table-cell;
+    text-align: left;
+    padding: 10px;
+    color: #333;
+    font-weight: bold;
+    vertical-align: top;
+}
+
+.contact-form input,
+.contact-form textarea {
+    display: table-cell;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+/* Styling for the submit button */
+.contact-form button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .text-section, .image-section {
+                max-width: 100%;
+            }
+            .scroll-buttons {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">Portfolio</div>
+        <div class="nav-links">
+            <a href="home1.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="galery.html">Galery</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+    <div class="contact-section">
+        <h1>Contact Me</h1>
+        <p>Jika Anda memiliki pertanyaan atau ingin menghubungi saya,</p>
+        <p>jangan ragu untuk menghubungi saya menggunakan formulir di bawah ini.</p>
+        <div class="contact-form">
+            <table>
+                <tr>
+                    <td><label for="name">Name</label></td>
+                    <td><input type="text" id="name" name="name" placeholder="Your name"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email</label></td>
+                    <td><input type="email" id="email" name="email" placeholder="Your email"></td>
+                </tr>
+                <tr>
+                    <td><label for="message">Message</label></td>
+                    <td><textarea id="message" name="message" rows="5" placeholder="Your message"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <button type="submit">Send Message</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('.contact-form');
+            const submitButton = form.querySelector('button[type="submit"]');
+        
+            submitButton.addEventListener('click', function (event) {
+                event.preventDefault(); // Mencegah form dikirim secara default
+        
+                // Membuat kolom untuk menampilkan pesan
+                const messageBox = document.createElement('div');
+                messageBox.textContent = 'Terima kasih, pesan Anda telah diproses.';
+                messageBox.style.border = '1px solid #007BFF';
+                messageBox.style.backgroundColor = '#E6F2FF';
+                messageBox.style.color = '#007BFF';
+                messageBox.style.padding = '10px';
+                messageBox.style.marginTop = '10px';
+                messageBox.style.borderRadius = '5px';
+                messageBox.style.textAlign = 'center';
+                messageBox.style.fontSize = '15px';
+                messageBox.style.fontWeight = 'bold';
+        
+                // Mengganti form dengan kolom pesan
+                form.innerHTML = ''; // Menghapus isi form
+                form.appendChild(messageBox); // Menambahkan kolom pesan
+            });
+        });
+    </script>
+    <a href="#" class="scroll-top"><i class="fas fa-arrow-up"></i></a>
+</body>
+</html>
